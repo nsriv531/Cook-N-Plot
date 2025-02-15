@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
+import StartButton from "../components/StartButton";
 
-function Home() {
+
+const Home = () => {
   return (
-    <div >
-      <header className="font-sans">
-          Welcome to Cook 'N Plot
-          <br></br>
-          <Link to="/Search">Search</Link>
-      </header>
-    </div>
-  );
+      <>
+          <StartButton />
+      </>
+
+  )
 }
 
 export default Home;
