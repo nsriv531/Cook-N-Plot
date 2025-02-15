@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import "aos/dist/aos.css";
-import './index.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
-// All pages
-import Home from './pages/Home';
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Search from "./pages/search";
+
 
 function App() {
   useEffect(() => {
@@ -26,13 +20,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Router>
-          <Routes>
-            <Route path="/" element={<Home />} /> 
-          </Routes>
-      </Router>
-    </>
+
+    <Router>
+      <Routes>
+        <Route path="/Search" element={<Search />} />
+      </Routes>
+    </Router>
   );
 }
 
