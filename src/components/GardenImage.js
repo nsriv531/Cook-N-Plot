@@ -1,10 +1,8 @@
 import React from "react";
 import Grass from "../assets/grass.png";
-import Grass from "../assets/grass.png";
 
 const GardenImage = () => {
   return (
-    <div className="absolute inset-0 pointer-events-none">
     <div className="absolute inset-0 pointer-events-none">
       <img 
         src={Grass} 
