@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
@@ -21,27 +22,29 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Recipes from Supabase</h1>
-      {error ? <p style={{ color: "red" }}>Error: {error}</p> : null}
+    <>
+      <div>
+        <h1>Recipes from Supabase</h1>
+        {error ? <p style={{ color: "red" }}>Error: {error}</p> : null}
 
-      {recipes.length > 0 ? (
-        <ul>
-          {recipes.map((recipe, index) => (
-            <li key={index}>{recipe.recipe_name}</li> // Updated to match the "recipe_name" column
-          ))}
-        </ul>
-      ) : (
-        <p>No recipes found</p>
-      )}
-    </div>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+        {recipes.length > 0 ? (
+          <ul>
+            {recipes.map((recipe, index) => (
+              <li key={index}>{recipe.recipe_name}</li> // Updated to match the "recipe_name" column
+            ))}
+          </ul>
+        ) : (
+          <p>No recipes found</p>
+        )}
+      </div>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
-
 
 export default App;
