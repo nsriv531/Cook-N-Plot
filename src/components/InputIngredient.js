@@ -18,8 +18,8 @@ const InputIngredient = () => {
 
   return (
     <div className="ingredient-input fade-in">
-      <div className="max-w-lg mx-auto p-4 bg-[#A4B465] font-custom rounded-lg shadow-md py-4">
-        <h2 className="text-4xl font-custom mb-4">Enter Available Ingredients:</h2>
+      <div className="max-w-lg mx-auto p-4 sm:p-6 lg:p-8 bg-[#A4B465] font-custom rounded-lg shadow-md py-4 w-full sm:w-80 md:w-96">
+        <h2 className="sm:text-3lg lg:text-5xl font-custom mb-2">Enter Available Ingredients:</h2>
         <div className="space-y-2">
           <div className="flex flex-wrap gap-2 mb-2">
             {/* Display ingredients as pills */}
@@ -43,7 +43,7 @@ const InputIngredient = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[#F2D7A1]"
+            className="text-lg border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[#F2D7A1]"
             placeholder="Press Enter to search with ingredients"
           />
         </div>
