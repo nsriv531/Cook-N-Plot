@@ -1,15 +1,24 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import StartButton from "../components/StartButton";
+import GardenImage from "../components/GardenImage";
+import ChickenGif from "../components/ChickenGif"; 
+import PlantPic from "../components/PlantPic"; 
 
-function Home() {
+const Home = () => {
   return (
-    <div >
-      <header className="font-sans">
-          Welcome to Cook 'N Plot
-          <br></br>
-          <Link to="/Search">Search</Link>
-      </header>
-    </div>
+    <>
+      <div className="relative garden-wrapper">
+        <GardenImage />
+        <PlantPic /> {/* Plants positioned over garden holes */}
+      </div>
+
+      <div className="relative h-[500px]">
+        <ChickenGif /> {/* Moving chicken GIF */}
+      </div>
+      
+      <StartButton />
+    </>
   );
-}
+};
 
 export default Home;

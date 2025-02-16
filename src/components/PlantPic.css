@@ -1,0 +1,27 @@
+.plant-wrapper {
+    position: relative;
+    margin-left: 120px; /* Shift everything further right */
+}
+
+.plants-container {
+    position: absolute;
+    top: 28px; /* Fine-tune so plants sit in the holes */
+    left: 20px; /* Adjust left spacing */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Even distribution */
+    align-items: center;
+    pointer-events: none;
+}
+
+.plant {
+    width: 45px; /* Make sure plants scale properly */
+    height: auto;
+    position: absolute;
+    transform: translateY(-50%); /* Adjust to center */
+    transition: transform 0.3s ease-in-out;
+}
+
+.plant:hover {
+    transform: scale(1.1) translateY(-50%);
+}
