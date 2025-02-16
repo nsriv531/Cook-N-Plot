@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Header from '../components/Header';
+import SearchDropdown from '../components/SearchDropdown';
 
 
 function Search() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    useEffect(() => {
-      const handleResize = () => setWindowWidth(window.innerWidth);
-  
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
 
-    return (
-      <>
-       
-       <div className="Search">
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <div className="Search" class="">
+        <div class="pt-20 text-center flex items-center justify-center">
         {windowWidth > 768 ? (
-            <h1>Desktop View</h1>
+            <>
+				<SearchDropdown />
+			</>
         ) : (
             <h1>Mobile View</h1>
         )}
         </div>
-      </>  
-    );
+      </div>
+    </>  
+  );
 }
 
 export default Search;
