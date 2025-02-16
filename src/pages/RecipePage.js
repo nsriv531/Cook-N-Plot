@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import "../index.css";
 
 const RecipePage = () => {
   const location = useLocation();
@@ -12,27 +13,27 @@ const RecipePage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-      <div className="max-w-lg bg-white rounded-lg shadow-lg p-6">
+    <div className="flex justify-center items-center min-h-screen 0 p-6">
+      <div className="max-w-lg rounded-lg shadow-lg bg-[#A4B465] p-6">
         {/* Recipe Name */}
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">{name}</h1>
+        <h1 className="text-5xl font-custom text-black mb-4">{name}</h1>
 
         {/* Recipe Image */}
         <img src={image} alt={name} className="w-full h-64 object-cover rounded-md shadow-md" />
 
         {/* Prep & Cook Time */}
-        <div className="mt-4 text-gray-700">
-          <p className="text-lg"><strong>Prep Time:</strong> {prepTime}</p>
-          <p className="text-lg"><strong>Cook Time:</strong> {cookTime}</p>
+        <div className="mt-4 text-black font-custom text-4xl">
+          <p className="text-xl "><strong>Prep Time:</strong> {prepTime}</p>
+          <p className="text-xl "><strong>Cook Time:</strong> {cookTime}</p>
         </div>
 
         {/* Description */}
-        <p className="mt-3 text-gray-600 leading-relaxed">{description}</p>
+        <p className="mt-3 text-black leading-relaxed">{description}</p>
 
         {/* Add to Garden Button */}
         <button 
-          className="mt-5 w-full bg-green-500 text-white py-2 px-4 rounded-lg text-lg font-semibold 
-                     hover:bg-green-600 transition duration-300 ease-in-out shadow-md">
+          className="mt-5 w-full bg-[#F2D7A1] text-black py-2 px-4 rounded-lg text-xl text-5xl font-custom
+                     hover:bg-[#dfc591] transition duration-300 ease-in-out shadow-md">
           Add to Garden!
         </button>
       </div>
