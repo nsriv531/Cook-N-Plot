@@ -44,16 +44,16 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-[#f7f7c9] font-custom text-black ">
+    <div className="flex justify-center items-center h-screen bg-[#f7f7c9] font-custom text-black">
       <form
         onSubmit={handleSubmit}
-        className="bg-[#A4B465] p-8 rounded-lg shadow-lg w-96"
+        className="bg-[#A4B465] p-4 sm:p-6 lg:p-8 rounded-lg shadow-lg w-full sm:w-80 md:w-96 mx-4"
       >
-        <h2 className="text-5xl font-bold mb-4 text-center">Sign Up</h2>
-        {error && <p className="text-red-[#626F47] text-sm mb-3">{error}</p>}
+        <h2 className="font-bold mb-4 text-center text-2xl sm:text-3xl lg:text-5xl">Sign Up</h2>
+        {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
         {success && <p className="text-[#626F47] text-sm mb-3">{success}</p>}
 
-        <label className="block mb-2 text-3xl">Enter Username</label>
+        <label className="block mb-2 text-base sm:text-lg lg:text-3xl">Enter Username</label>
         <input
           type="text"
           name="username"
@@ -63,7 +63,7 @@ const SignUpForm = () => {
           required
         />
 
-        <label className="block mt-4 mb-2 text-3xl">Confirm Username</label>
+        <label className="block mt-4 mb-2 text-base sm:text-lg lg:text-3xl">Confirm Username</label>
         <input
           type="text"
           name="confirmUsername"
@@ -73,7 +73,7 @@ const SignUpForm = () => {
           required
         />
 
-        <label className="block mt-4 mb-2 text-3xl">Email</label>
+        <label className="block mt-4 mb-2 text-base sm:text-lg lg:text-3xl">Email</label>
         <input
           type="email"
           name="email"
@@ -83,7 +83,7 @@ const SignUpForm = () => {
           required
         />
 
-        <label className="block mt-4 mb-2 text-3xl">Enter Password</label>
+        <label className="block mt-4 mb-2 text-base sm:text-lg lg:text-3xl">Enter Password</label>
         <input
           type="password"
           name="password"
@@ -93,7 +93,7 @@ const SignUpForm = () => {
           required
         />
 
-        <label className="block mt-4 mb-2 text-3xl">Confirm Password</label>
+        <label className="block mt-4 mb-2 text-base sm:text-lg lg:text-3xl">Confirm Password</label>
         <input
           type="password"
           name="confirmPassword"
@@ -105,7 +105,7 @@ const SignUpForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-[#626F47] hover:[#dfc591] text-black font-bold py-2 px-4 rounded mt-4 text-3xl"
+          className="w-full bg-[#626F47] hover:bg-[#dfc591] text-black font-bold py-2 sm:py-3 px-4 rounded mt-4 text-base sm:text-lg lg:text-3xl"
         >
           Sign Up
         </button>

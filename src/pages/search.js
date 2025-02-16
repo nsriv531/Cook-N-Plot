@@ -45,7 +45,7 @@ function Search() {
     return (
         <>
             <div className="Search">
-                <div className="pt-20 text-center items-center justify-center flex-col text-xl">
+                <div className="pt-10 sm:pt-14 md:pt-20 text-center items-center justify-center flex flex-col text-lg sm:text-xl">
                 {windowWidth > 768 ? (
                     <>
                         <SearchDropdown 
