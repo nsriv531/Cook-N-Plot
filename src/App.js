@@ -5,10 +5,10 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/search";
+import Header from './components/Header';
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import RecipePage from "./pages/recipepage"; // ✅ Import RecipePage
-
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -30,6 +30,7 @@ function App() {
   return (
     <>
       <Router>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
