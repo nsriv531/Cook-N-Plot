@@ -9,6 +9,7 @@ import Title from "../components/Title";
 const Home = () => {
   return (
     <>
+      <StartButton />
       <GardenImage />
       <div className="relative z-1" style={{ top: "25px", left: "25px" }}>
         <Blue5 />
