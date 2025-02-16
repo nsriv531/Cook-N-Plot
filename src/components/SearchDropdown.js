@@ -24,14 +24,14 @@ const SearchDropdown = () => {
 
   return (
     <div className="flex justify-center items-center py-4 font-custom">
-      <div className="w-64 bg-[#626F47] p-6 rounded-lg shadow-mg">
+      <div className="w-64 bg-[#A4B465] p-6 rounded-lg shadow-mg">
         <label className="block text-sm font-custom text-black">Search Recipes By:</label>
         <select 
             id="option" 
             name="option" 
             value={selectedSearchOption} 
             onChange={handleChange}
-            className="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="mt-2 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-[#F2D7A1]"
         >
             <option>Ingredients</option>
             <option>Recipes</option>

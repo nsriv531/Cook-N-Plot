@@ -29,7 +29,10 @@ function Search() {
                 <IngredientInput />
 			</>
         ) : (
-            <SearchDropdown />
+            <>
+                <SearchDropdown />
+                <IngredientInput />
+			</>
         )}
         </div>
       </div>

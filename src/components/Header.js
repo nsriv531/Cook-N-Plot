@@ -31,7 +31,6 @@ useEffect(() => {
 			left-0 
 			w-full 
 			bg-[#626F47] 
-			text-white 
 			p-5 
 			transform 
 			transition-transform 
