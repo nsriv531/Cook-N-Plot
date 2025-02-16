@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import "../styles.css";
 
-const SearchDropdown = () => {
+const SearchDropdown = ({ selectedSearchOption, onSearchOptionChange }) => {
   const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
   const dropdownRef = useRef(null);
 
-  const [selectedSearchOption, setSelectedSearchOption] = useState("Ingredients");
-
   const handleChange = (event) => {
-    setSelectedSearchOption(event.target.value);
+    onSearchOptionChange(event.target.value);
   };
 
   // Close the dropdown if clicked outside
@@ -36,10 +35,6 @@ const SearchDropdown = () => {
             <option>Ingredients</option>
             <option>Recipes</option>
         </select>
-
-        <p className="mt-4 text-lg text-black">
-            TEST: <span className="font-bold">{selectedSearchOption}</span>
-        </p>
       </div>
     </div>
   );
