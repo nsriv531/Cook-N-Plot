@@ -37,7 +37,6 @@ exports.addRecipe = async (req, res) => {
 exports.signUpUser = async (req, res) => {
   const { username, confirmUsername, email, password, confirmPassword } = req.body;
 
-  // Validation
   if (!username || !confirmUsername || !email || !password || !confirmPassword) {
     return res.status(400).json({ error: "All fields are required" });
   }
@@ -48,10 +47,7 @@ exports.signUpUser = async (req, res) => {
     return res.status(400).json({ error: "Passwords do not match" });
   }
 
-  // Insert into Supabase
-  const { data, error } = await supabase.from("rusers").insert([
-    { username, email, password }
-  ]);
+  const { data, error } = await supabase.from("rusers").insert([{ username, email, password }]);
 
   if (error) {
     console.error("Error signing up user:", error);
@@ -60,3 +56,4 @@ exports.signUpUser = async (req, res) => {
 
   res.json({ message: "User registered successfully", data });
 };
+

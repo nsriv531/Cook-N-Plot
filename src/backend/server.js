@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// ✅ Make sure this route is set correctly
-app.use("/api/recipes", require("./routes/userroutes")); 
+// ✅ Ensure Correct Routes Are Assigned
+app.use("/api/users", require("./routes/userroutes")); // Correctly handles user-related routes
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));

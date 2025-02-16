@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get("/", getRecipes);  // ✅ Fetch all recipes
 router.post("/", addRecipe);  // ✅ Add a new recipe
-router.post("/", signUpUser);
+router.post("/signup", signUpUser); 
 
 module.exports = router;
