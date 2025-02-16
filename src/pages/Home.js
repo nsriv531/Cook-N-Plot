@@ -9,17 +9,14 @@ import Title from "../components/Title";
 const Home = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <GardenImage /> 
-
+      <GardenImage />
       <div className="absolute top-5 w-full text-center z-5">
-      <Title />
+        <Title />
       </div>
-
-      <div className="absolute top-20 left-5 z-5">
+      <div className="absolute top-20 left-5 z-10">
         <Blue5 />
       </div>
-
-      <div className="absolute inset-0 flex items-center justify-center z-6">
+      <div className="absolute inset-0 flex items-center justify-center z-5">
         <StartButton />
       </div>
     </div>
