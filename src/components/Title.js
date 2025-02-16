@@ -1,10 +1,15 @@
+import TitleImage from "../assets/TitleImage.png";
+
 function Title() {
     return (
-      <div className="flex items-top justify-center min-h-screen" >
-          
-      </div>
+        <div className="flex relative items-top justify-center scale-350 top-40" >
+            <img 
+                src={TitleImage} 
+                alt="Title" 
+                class="z-10"
+            />
+        </div>
     );
-  }
-  
-  export default Title;
-  
+}
+
+export default Title;
