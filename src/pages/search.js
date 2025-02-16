@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import SearchDropdown from '../components/SearchDropdown';
-
+import "../fonts.css";
+import "../components/InputIngredient"
+import IngredientInput from '../components/InputIngredient';
 
 function Search() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,13 +22,14 @@ function Search() {
     <>
       <Header />
       <div className="Search" class="">
-        <div class="pt-20 text-center flex items-center justify-center">
+        <div className="pt-20 text-center items-center justify-center flex-col">
         {windowWidth > 768 ? (
             <>
-				<SearchDropdown />
+                <SearchDropdown />
+                <IngredientInput />
 			</>
         ) : (
-            <h1>Mobile View</h1>
+            <SearchDropdown />
         )}
         </div>
       </div>

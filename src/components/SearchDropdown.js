@@ -23,22 +23,24 @@ const SearchDropdown = () => {
   }, []);
 
   return (
-    <div class="w-64 items-center justify-center ">
-        <label class="block text-sm font-medium text-gray-700">Search Recipes By:</label>
+    <div className="flex justify-center items-center py-4 font-custom">
+      <div className="w-64 bg-[#626F47] p-6 rounded-lg shadow-mg">
+        <label className="block text-sm font-custom text-black">Search Recipes By:</label>
         <select 
             id="option" 
             name="option" 
             value={selectedSearchOption} 
             onChange={handleChange}
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         >
             <option>Ingredients</option>
             <option>Recipes</option>
         </select>
 
-        <p className="mt-4 text-lg text-gray-700">
+        <p className="mt-4 text-lg text-black">
             TEST: <span className="font-bold">{selectedSearchOption}</span>
-        </p>   
+        </p>
+      </div>
     </div>
   );
 };
