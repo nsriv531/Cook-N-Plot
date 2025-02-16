@@ -6,7 +6,7 @@ function Title() {
             <img 
                 src={TitleImage} 
                 alt="Title" 
-                class="z-10"
+                class="z-1"
             />
         </div>
     );
