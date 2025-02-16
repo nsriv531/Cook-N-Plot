@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
@@ -18,7 +18,6 @@ function Search() {
 
     return (
       <>
-       
        <div className="Search">
         {windowWidth > 768 ? (
             <h1>Desktop View</h1>
