@@ -9,11 +9,11 @@ import Blue5 from "../components/FlowerTest";
 const Home = () => {
   return (
     <>
+      <StartButton />
       <GardenImage />
       <div class="z-1 relative absolute top-25px left-25px">
         <Blue5 />
       </div>
-      <StartButton />
     </>
   );
 };
