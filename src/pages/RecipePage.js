@@ -1,12 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../index.css";
+import beefImage from "../assets/beef.png"; // Import the beef image
 
 const RecipePage = () => {
   const location = useLocation();
   const { name, image, prepTime, cookTime, description } = location.state || {
     name: "Beef Burger",
-    image: "https://simplehomeedit.com/wp-content/uploads/2024/03/Homemade-Beef-Burgers-4.webp", 
+    image: beefImage, // Use local beef.png instead of URL
     prepTime: "10 mins",
     cookTime: "15 mins",
     description: "1. Mix ingredients.\n2. Shape into patties.\n3. Cook on medium heat until golden brown.\n4. Serve with buns and toppings."
