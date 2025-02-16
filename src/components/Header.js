@@ -36,12 +36,13 @@ useEffect(() => {
 			transition-transform 
 			duration-[600ms] ${	isHeaderVisible ? "translate-y-0" : "-translate-y-full"}
 		`}>
-			<nav class="flex space-x-8 font-custom text-black text-4xl ">
-				<div class="nav-left flex space-x-8 font-custom text-black text-4xl">
+			<nav class="flex space-x-8 sm:space-x-4 font-custom text-black sm:text-2lg lg:text-4xl">
+				<div class="nav-left space-x-8 sm:space-x-4 flex font-custom text-black ">
+
 					<Link to={"/"} class="hover:underline ">Garden</Link>
 					<Link to={"/Search"} class="hover:underline ">Search</Link>
 				</div>
-				<div class="nav-right flex space-x-8 font-custom text-black text-4xl justify-right">				
+				<div class="nav-right space-x-8 sm:space-x-4 flex font-custom text-black ">
 				<Link to={"/signup"} class="hover:underline text-right">Sign Up</Link>
 				<Link to={"/login"} class="hover:underline text-end">Login</Link>
 				</div>
@@ -50,4 +51,4 @@ useEffect(() => {
 	);
 };
 
-export default Header;
+export default Header; 

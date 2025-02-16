@@ -36,13 +36,13 @@ const LoginForm = () => {
     <div className="flex justify-center items-center h-screen bg-[#f7f7c9] font-custom">
       <form
         onSubmit={handleSubmit}
-        className="bg-[#A4B465] text-black p-8 rounded-lg shadow-lg w-96"
+        className="bg-[#A4B465] text-black p-4 sm:p-6 lg:p-8 rounded-lg shadow-lg w-full sm:w-80 md:w-96 mx-4"
       >
-        <h2 className="text-5xl font-custom mb-4 text-center">Login</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-custom mb-4 text-center">Login</h2>
         {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
         {success && <p className="text-green-500 text-sm mb-3">{success}</p>}
 
-        <label className="block mb-2 text-3xl">Username</label>
+        <label className="block mb-2 text-base sm:text-lg lg:text-3xl">Username</label>
         <input
           type="text"
           name="username"
@@ -52,7 +52,7 @@ const LoginForm = () => {
           required
         />
 
-        <label className="block mt-4 mb-2 text-3xl">Password</label>
+        <label className="block mt-4 mb-2 text-base sm:text-lg lg:text-3xl">Password</label>
         <input
           type="password"
           name="password"
@@ -64,7 +64,7 @@ const LoginForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-[#626F47] hover:[#dfc591] text-black font-bold py-2 px-4 rounded mt-4 text-3xl"
+          className="w-full bg-[#626F47] hover:bg-[#dfc591] text-black font-bold py-2 sm:py-3 px-4 rounded mt-4 text-base sm:text-lg lg:text-3xl"
         >
           Login
         </button>
