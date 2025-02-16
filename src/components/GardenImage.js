@@ -14,5 +14,7 @@ const GardenImage = () => {
   );
 };
 
-
 export default GardenImage;
+=========
+export default GardenImage;
+>>>>>>>>> Temporary merge branch 2
