@@ -1,10 +1,12 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 import "../index.css";
 import beefImage from "../assets/beef.png"; // Import the beef image
 
 const RecipePage = () => {
   const location = useLocation();
+  const navigate = useNavigate(); // Hook to navigate back
+
   const { name, image, prepTime, cookTime, description } = location.state || {
     name: "Beef Burger",
     image: beefImage, // Use local beef.png instead of URL
@@ -40,7 +42,9 @@ const RecipePage = () => {
         {/* Add to Garden Button */}
         <button 
           className="mt-5 w-full bg-[#F2D7A1] text-black py-2 px-4 rounded-lg text-xl sm:text-2xl font-custom
-                     hover:bg-[#dfc591] transition duration-300 ease-in-out shadow-md">
+                     hover:bg-[#dfc591] transition duration-300 ease-in-out shadow-md"
+          onClick={() => navigate("/")} // Redirect to Home Page when clicked
+        >
           Add to Garden!
         </button>
       </div>
