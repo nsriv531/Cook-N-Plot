@@ -36,7 +36,7 @@ useEffect(() => {
 			transition-transform 
 			duration-[600ms] ${	isHeaderVisible ? "translate-y-0" : "-translate-y-full"}
 		`}>
-			<nav class="flex space-x-8 font-custom text-black text-5x1 text-left">
+			<nav class="flex space-x-8 font-custom text-black text-4xl text-left">
 				<Link to={"/"} class="hover:underline ">Garden</Link>
 				<Link to={"/Search"} class="hover:underline ">Search</Link>
 			</nav>

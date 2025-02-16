@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "../styles.css";
+
 
 const SearchDropdown = ({ selectedSearchOption, onSearchOptionChange }) => {
   const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
@@ -23,8 +23,8 @@ const SearchDropdown = ({ selectedSearchOption, onSearchOptionChange }) => {
 
   return (
     <div className="flex justify-center items-center py-4 font-custom">
-      <div className="w-64 bg-[#A4B465] p-6 rounded-lg shadow-mg">
-        <label className="block text-sm font-custom text-black">Search Recipes By:</label>
+      <div className="max-w-lg bg-[#A4B465] p-4 py-4 rounded-lg shadow-mg gap-2 mb-2">
+        <label className="block text-4xl font-custom text-black">Search Recipes By:</label>
         <select 
             id="option" 
             name="option" 

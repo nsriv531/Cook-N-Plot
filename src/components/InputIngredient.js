@@ -19,7 +19,7 @@ const InputIngredient = () => {
   return (
     <div className="ingredient-input fade-in">
       <div className="max-w-lg mx-auto p-4 bg-[#A4B465] font-custom rounded-lg shadow-md py-4">
-        <h2 className="text-xl font-custom mb-4">Enter Available Ingredients:</h2>
+        <h2 className="text-4xl font-custom mb-4">Enter Available Ingredients:</h2>
         <div className="space-y-2">
           <div className="flex flex-wrap gap-2 mb-2">
             {/* Display ingredients as pills */}
