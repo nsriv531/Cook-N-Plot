@@ -3,11 +3,11 @@ import Grass from "../assets/grass.png"; // Adjust the path if necessary
 
 const GardenImage = () => {
   return (
-    <div class="flex absolute bg-cover bg-center bg-fixed">
+    <div class="flex fixed bg-cover bg-center bg-fixed scale-300 ">
       <img 
         src={Grass} 
         alt="Base" 
-        
+        class="z-0"
       />
     </div>
   );
