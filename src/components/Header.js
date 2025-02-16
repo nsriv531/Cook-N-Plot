@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import "../fonts.css";
+import userIcon from "../assets/user.png"; // Import the user image
 
 const Header = () => {
-const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
-useEffect(() => {
-		// Function to handle cursor movement
-		const handleMouseMove = (e) => {
-		if (e.clientY < 50) {
-			setIsHeaderVisible(true);
-		} else {
-			setIsHeaderVisible(false);
-		}
-		};
+    useEffect(() => {
+        // Function to handle cursor movement
+        const handleMouseMove = (e) => {
+            if (e.clientY < 50) {
+                setIsHeaderVisible(true);
+            } else {
+                setIsHeaderVisible(false);
+            }
+        };
 
-		// Add mousemove event listener
-		document.addEventListener("mousemove", handleMouseMove);
+        // Add mousemove event listener
+        document.addEventListener("mousemove", handleMouseMove);
 
-		// Cleanup the event listener on component unmount
-		return () => {
-		document.removeEventListener("mousemove", handleMouseMove);
-		};
-	}, []);
-
+        // Cleanup the event listener on component unmount
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
 	return (
 		<header class={`
 			fixed 
@@ -51,4 +51,4 @@ useEffect(() => {
 	);
 };
 
-export default Header; 
+export default Header;
