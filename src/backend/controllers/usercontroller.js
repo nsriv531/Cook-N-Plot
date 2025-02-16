@@ -4,7 +4,7 @@ const supabase = require("../config/supabase");
 exports.getRecipes = async (req, res) => {
   console.log("Fetching recipes from Supabase...");
   
-  const { data, error } = await supabase.from("actualrecipes").select("*");
+  const { data, error } = await supabase.from("recipes").select("*"); // ✅ Changed from "actualrecipes" to "recipes"
 
   if (error) {
     console.error("Error fetching recipes:", error);
@@ -16,14 +16,14 @@ exports.getRecipes = async (req, res) => {
 
 // Add a new recipe
 exports.addRecipe = async (req, res) => {
-  const { name, ingredients, cook_time, difficulty, category, instructions, image_url } = req.body;
+  const { recipe_name, created_at } = req.body; // ✅ Updated field names to match the "recipes" table
 
-  if (!name || !ingredients || !cook_time || !difficulty || !category || !instructions || !image_url) {
-    return res.status(400).json({ error: "All fields are required" });
+  if (!recipe_name) {
+    return res.status(400).json({ error: "Recipe name is required" });
   }
 
-  const { data, error } = await supabase.from("actualrecipes").insert([
-    { name, ingredients, cook_time, difficulty, category, instructions, image_url }
+  const { data, error } = await supabase.from("recipes").insert([
+    { recipe_name, created_at: new Date().toISOString() } // ✅ Insert with correct fields
   ]);
 
   if (error) {
