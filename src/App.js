@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Home from "./pages/Home";
 import Search from "./pages/search";
 import Header from './components/Header';
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import RecipePage from "./pages/recipepage"; // ✅ Import RecipePage
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -31,6 +34,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/recipe" element={<RecipePage />} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </Router>
       <div>
