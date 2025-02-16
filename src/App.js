@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/search";
+import SignUp from "./pages/SignUp";
 import RecipePage from "./pages/recipepage"; // ✅ Import RecipePage
 
 
@@ -32,7 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/recipe" element={<RecipePage />} />
-
+          <Route path="/signup" element={<SignUp/>} />
         </Routes>
       </Router>
       <div>
