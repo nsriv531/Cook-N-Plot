@@ -37,7 +37,7 @@ useEffect(() => {
 			duration-[600ms] ${	isHeaderVisible ? "translate-y-0" : "-translate-y-full"}
 			z-10
 		`}>
-			<nav class="flex space-x-8 sm:space-x-4 font-custom text-black sm:text-2lg lg:text-4xl">
+			<nav class="relative z-50 flex space-x-8 sm:space-x-4 font-custom text-black sm:text-2lg md:text-2xl lg:text-4xl">
 				<div class="nav-left space-x-8 sm:space-x-4 flex font-custom text-black ">
 
 					<Link to={"/"} class="hover:underline ">Garden</Link>
