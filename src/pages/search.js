@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import "../fonts.css";
 import "../components/InputIngredient"
@@ -15,9 +14,7 @@ function Search() {
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -42,33 +39,29 @@ function Search() {
     });
   };
 
-    return (
-        <>
-            <div className="Search">
-                <div className="pt-10 sm:pt-14 md:pt-20 text-center items-center justify-center flex flex-col text-lg sm:text-xl">
-                {windowWidth > 768 ? (
-                    <>
-                        <SearchDropdown 
-                            selectedSearchOption={selectedSearchOption}
-                            onSearchOptionChange={handleSearchOptionChange}
-                        />
-                        {selectedSearchOption === 'Ingredients' && <IngredientInput />}
-                        {selectedSearchOption === "Recipes" && <InputRecipe />}
-                    </>
-                ) : (
-                    <>
-                        <SearchDropdown 
-                            selectedSearchOption={selectedSearchOption}
-                            onSearchOptionChange={handleSearchOptionChange}
-                        />
-                        {selectedSearchOption === 'Ingredients' && <IngredientInput />}
-                        {selectedSearchOption === "Recipes" && <InputRecipe />}
-                    </>
-                )}
-                </div>
-            </div>
-        </>  
-    );  // Function to go to RecipePage.js with a sample recipe
-};
+  return (
+    <>
+      <div className="Search">
+        <div className="pt-10 sm:pt-14 md:pt-20 text-center items-center justify-center flex flex-col text-lg sm:text-xl">
+          <SearchDropdown 
+            selectedSearchOption={selectedSearchOption}
+            onSearchOptionChange={handleSearchOptionChange}
+          />
+          {selectedSearchOption === 'Ingredients' && <IngredientInput />}
+          {selectedSearchOption === "Recipes" && <InputRecipe />}
+          
+          {/* Get Recipe Button */}
+          <button 
+            onClick={handleViewRecipe} 
+            className="mt-6 w-48 sm:w-60 bg-[#F2D7A1] text-black py-3 px-6 rounded-lg text-xl font-custom
+                       hover:bg-[#dfc591] transition duration-300 ease-in-out shadow-md border-2 border-black"
+          >
+            Get Recipe
+          </button>
+        </div>
+      </div>
+    </>  
+  );
+}
 
 export default Search;
