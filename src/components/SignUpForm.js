@@ -9,12 +9,13 @@ const SignUpForm = () => {
     confirmPassword: ""
   });
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.username !== formData.confirmUsername) {
       setError("Usernames do not match");
@@ -24,8 +25,22 @@ const SignUpForm = () => {
       setError("Passwords do not match");
       return;
     }
-    console.log("User Registered", formData);
-    setError("");
+
+    try {
+      const response = await fetch("http://localhost:5000/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error);
+
+      setSuccess("User registered successfully!");
+      setError("");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -36,6 +51,7 @@ const SignUpForm = () => {
       >
         <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
         {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
+        {success && <p className="text-green-500 text-sm mb-3">{success}</p>}
 
         <label className="block mb-2">Enter Username</label>
         <input
