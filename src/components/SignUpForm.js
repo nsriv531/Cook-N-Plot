@@ -44,68 +44,68 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
+    <div className="flex justify-center items-center h-screen bg-[#f7f7c9] font-custom text-black ">
       <form
         onSubmit={handleSubmit}
-        className="bg-gray-800 text-white p-8 rounded-lg shadow-lg w-96"
+        className="bg-[#A4B465] p-8 rounded-lg shadow-lg w-96"
       >
-        <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
-        {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
-        {success && <p className="text-green-500 text-sm mb-3">{success}</p>}
+        <h2 className="text-5xl font-bold mb-4 text-center">Sign Up</h2>
+        {error && <p className="text-red-[#626F47] text-sm mb-3">{error}</p>}
+        {success && <p className="text-[#626F47] text-sm mb-3">{success}</p>}
 
-        <label className="block mb-2">Enter Username</label>
+        <label className="block mb-2 text-3xl">Enter Username</label>
         <input
           type="text"
           name="username"
           value={formData.username}
           onChange={handleChange}
-          className="w-full p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#dfc591] focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
 
-        <label className="block mt-4 mb-2">Confirm Username</label>
+        <label className="block mt-4 mb-2 text-3xl">Confirm Username</label>
         <input
           type="text"
           name="confirmUsername"
           value={formData.confirmUsername}
           onChange={handleChange}
-          className="w-full p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#dfc591] focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
 
-        <label className="block mt-4 mb-2">Email</label>
+        <label className="block mt-4 mb-2 text-3xl">Email</label>
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#dfc591] focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
 
-        <label className="block mt-4 mb-2">Enter Password</label>
+        <label className="block mt-4 mb-2 text-3xl">Enter Password</label>
         <input
           type="password"
           name="password"
           value={formData.password}
           onChange={handleChange}
-          className="w-full p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#dfc591] focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
 
-        <label className="block mt-4 mb-2">Confirm Password</label>
+        <label className="block mt-4 mb-2 text-3xl">Confirm Password</label>
         <input
           type="password"
           name="confirmPassword"
           value={formData.confirmPassword}
           onChange={handleChange}
-          className="w-full p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#dfc591] focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
 
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+          className="w-full bg-[#626F47] hover:[#dfc591] text-black font-bold py-2 px-4 rounded mt-4 text-3xl"
         >
           Sign Up
         </button>

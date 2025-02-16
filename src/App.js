@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/search";
 import Header from './components/Header';
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import RecipePage from "./pages/recipepage"; // ✅ Import RecipePage
+import RecipePage from "./pages/RecipePage"; // ✅ Import RecipePage
 
 function App() {
   const [recipes, setRecipes] = useState([]);
