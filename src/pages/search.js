@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import SearchDropdown from '../components/SearchDropdown';
 import "../fonts.css";
 import "../components/InputIngredient"
 import IngredientInput from '../components/InputIngredient';
 import selectedSearchOption from "../components/SearchDropdown"; // For handling search type
 import InputRecipe from '../components/InputRecipe';
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import SearchDropdown from "../components/SearchDropdown";
