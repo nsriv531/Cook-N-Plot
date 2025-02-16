@@ -1,13 +1,14 @@
 import React from "react";
-import Grass from "../assets/grass.png"; // Adjust the path if necessary
+import Grass from "../assets/grass.png";
 
 const GardenImage = () => {
   return (
-    <div class="flex fixed bg-cover bg-center bg-fixed scale-350">
+    <div className="absolute inset-0 pointer-events-none">
       <img 
         src={Grass} 
         alt="Base" 
-        class="z-0"
+        className="w-full h-full object-cover z-0"
+        style={{ imageRendering: "pixelated" }} 
       />
     </div>
   );
