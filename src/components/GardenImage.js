@@ -14,5 +14,5 @@ const GardenImage = () => {
   );
 };
 
-
 export default GardenImage;
+
