@@ -39,20 +39,6 @@ function App() {
           <Route path="/login" element={<Login/>} />
         </Routes>
       </Router>
-      <div>
-        <h1>Recipes from Supabase</h1>
-        {error ? <p style={{ color: "red" }}>Error: {error}</p> : null}
-
-        {recipes.length > 0 ? (
-          <ul>
-            {recipes.map((recipe, index) => (
-              <li key={index}>{recipe.recipe_name}</li> // Updated to match the "recipe_name" column
-            ))}
-          </ul>
-        ) : (
-          <p>No recipes found</p>
-        )}
-      </div>
     </>
   );
 }

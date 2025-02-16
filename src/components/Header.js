@@ -35,6 +35,7 @@ useEffect(() => {
 			transform 
 			transition-transform 
 			duration-[600ms] ${	isHeaderVisible ? "translate-y-0" : "-translate-y-full"}
+			z-10
 		`}>
 			<nav class="flex space-x-8 font-custom text-black text-4xl ">
 				<div class="nav-left flex space-x-8 font-custom text-black text-4xl">
